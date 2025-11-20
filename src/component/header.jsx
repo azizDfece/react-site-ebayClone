@@ -1,13 +1,47 @@
 import { Link } from 'react-router-dom'
 import '../css/header.css'
 
+import { useEffect, useRef } from 'react'
 
 
 
 function Header() {
+    const fDdHeader = useRef(null)
+    const watchList = useRef(null)
 
+    useEffect(() => {
+        const trigger = watchList.current
+        const dropdown = fDdHeader.current
+
+        if (!trigger) return
+
+
+        function handledropdwn1() {
+
+            dropdown.style.display = "block"
+        }
+        function handleClickOutside(e) {
+            console.log(e.target);
+            if (dropdown && !dropdown.contains(e.target)
+                && !trigger.contains(e.target)) {
+                dropdown.style.display = 'none'
+            }
+
+        }
+
+
+        trigger.addEventListener("click", handledropdwn1)
+        document.addEventListener("click", handleClickOutside)
+
+        return () => {
+            trigger.removeEventListener("click", handledropdwn1)
+            document.removeEventListener('click', handleClickOutside)
+        }
+
+    }, [])
 
     return (
+
 
         <header>
             <div className="top-header">
@@ -23,9 +57,9 @@ function Header() {
                 <div className="right-top-header">
                     <a href="#">Ship to</a>
                     <a href="#">Sell</a>
-                    <p className='top-header-dropdown'>Watchlist  ^
-                        <div className='t-h-d'>لا يوجد اشياء</div>
-                    </p>
+                    <div className='top-header-dropdown' ref={watchList}>Watchlist  ^
+                        <div className='t-h-d' ref={fDdHeader}>لا يوجد اشياء</div>
+                    </div>
                     <p className='top-header-dropdown2'>My ebay  ^</p>
                 </div>
             </div>
