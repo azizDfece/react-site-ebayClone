@@ -1,0 +1,26 @@
+.card {
+    background-color: #e0e0e0;
+    width: 90%;
+    padding: 32px;
+    margin: 32px;
+    margin-left: 66px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2 {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.card button {
+    padding: 16px 32px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+}

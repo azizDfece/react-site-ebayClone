@@ -117,6 +117,14 @@ function Header() {
                     <a href="#">Advanced</a>
                 </div>
             </div>
+            <div className="last-header">
+                <a href="#">eBay Live</a>
+                <a href="#">Saved</a>
+                <a href="#">Electronics</a>
+                <a href="#">Motors</a>
+                <a href="#">Fashion</a>
+                <a href="#">Collectibles Art</a>
+            </div>
         </header>
     )
 }

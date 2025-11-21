@@ -157,3 +157,22 @@
     color: #555;
     text-decoration: none;
 }
+
+/* last header  */
+.last-header {
+    color: #444;
+    border-top: 1px solid #64646463;
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.last-header a {
+    color: #444;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.last-header a:hover {
+    text-decoration: underline;
+    color: blue;
+}

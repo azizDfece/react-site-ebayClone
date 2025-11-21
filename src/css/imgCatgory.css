@@ -1,0 +1,33 @@
+.div-imgcatgory {
+    margin-top: 32px;
+    padding: 32px;
+}
+
+.div-imgcatgory h2 {
+    font-size: 1.9rem;
+
+
+}
+
+.card2 {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.cardcat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardcat img {
+    border-radius: 50%;
+    width: 154px;
+    height: 154px;
+
+}
+
+.cardcat p {
+    font-weight: bold;
+}

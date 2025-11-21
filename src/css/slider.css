@@ -1,0 +1,27 @@
+.slider-container {
+    width: 100%;
+    position: relative;
+    height: 400px;
+}
+
+.slider-container img {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+}
+
+.slider-container p {
+    position: absolute;
+
+    bottom: 50px;
+
+    color: red;
+    font-size: large;
+    padding: 10px;
+}
+
+.slider-container .next-btn {
+    left: 50px;
+
+}
